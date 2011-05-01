@@ -1,8 +1,11 @@
 // Az Application tartalmazza a globális beállításait az appnak (kezdve
 // a nevével) és kezeli a model, kontroller, nézet referenciákat.
 
-Ext.require('Ext.container.Viewport');
-Ext.require('Ext.form.Panel');
+Ext.require([
+    'Ext.container.Viewport'
+  , 'Ext.form.Panel'
+]);
+
 
 Ext.application({
 

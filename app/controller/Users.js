@@ -18,8 +18,10 @@ Ext.define('AM.controller.Users'
       ]
 
       , init: function () {
-          console.log('Initialized Users!');
-          console.log('This happens before the Application launch function is called');
+          if (typeof console !== "undefined") {
+            console.log('Initialized Users!');
+            console.log('This happens before the Application launch function is called');
+          }
           this.control({
               'viewport > panel': {
                 render: this.onPanelRendered
@@ -34,11 +36,15 @@ Ext.define('AM.controller.Users'
         }
 
       , onPanelRendered: function () {
-          console.log('The panel was rendered');
+          if (typeof console !== "undefined") {
+            console.log('The panel was rendered');
+          }
         }
 
       , editUser : function (grid, record) {
-          console.log('Double clicked on ' + record.get('name'));
+          if (typeof console !== "undefined") {
+            console.log('Double clicked on ' + record.get('name'));
+          }
 
           var view = Ext.widget('useredit'); // same as Ext.create('widget.useredit');
 
@@ -51,8 +57,10 @@ Ext.define('AM.controller.Users'
               , record = form.getRecord()
               , values = form.getValues();
 
-          
-          console.log('clicked the Save button');
+
+          if (typeof console !== "undefined") {
+            console.log('clicked the Save button');
+          }
 
           record.set(values);
           win.close();

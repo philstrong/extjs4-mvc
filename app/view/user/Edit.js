@@ -6,7 +6,7 @@ Ext.define('AM.view.user.Edit', {
   , alias :     'widget.useredit'
   , title :     'Edit User'
   , layout :    'fit'
-  , width :     '269px'
+  , width :     '269'
   , autoShow :  true
 
   , initComponent : function () {
